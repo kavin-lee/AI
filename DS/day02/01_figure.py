@@ -11,3 +11,5 @@ import matplotlib.pyplot as mp
 mp.figure('Figure A', facecolor='gray')
 mp.figure('Figure B', facecolor='lightgray')
 mp.show()
+
+
