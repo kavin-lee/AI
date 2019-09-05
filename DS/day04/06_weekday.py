@@ -36,3 +36,21 @@ for wday in range(ave_price.size):
     # 用掩码进行数据清洗
     ave_price[wday] = np.mean(closing_prices[wdays == wday])
 print(ave_price)
+
+# 数据的轴向汇总 apply_along_axis()
+ary = np.arange(1, 21).reshape(4, 5)
+print(ary)
+
+
+def func(array):
+    return array.mean(), array.max(), array.min()
+
+
+# 汇总ary数组,每一行的均值
+r = np.apply_along_axis(func, 1, ary)
+print(r)
+
+
+# 汇总ary数组,每一列的均值
+r = np.apply_along_axis(func, 0, ary)
+print(r)
