@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+
 """
 demo06_polyfit.py   多项式拟合两支股票差价函数
 """
@@ -15,6 +16,7 @@ def dmy2ymd(dmy):
     t = time.date().strftime('%Y-%m-%d')
     return t
 
+
 dates, bhp_closing_prices = np.loadtxt(
     '../da_data/bhp.csv', delimiter=',',
     usecols=(1, 6), unpack=True,
@@ -24,7 +26,6 @@ dates, bhp_closing_prices = np.loadtxt(
 vale_closing_prices = np.loadtxt(
     '../da_data/vale.csv', delimiter=',',
     usecols=(6,))
-
 
 # 绘制收盘价折线图
 mp.figure('Polyfit', facecolor='lightgray')
